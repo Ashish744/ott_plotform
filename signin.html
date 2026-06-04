@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In | Stackly</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="auth-page">
+  <header class="site-header auth-header">
+    <div class="nav-inner container">
+      <a class="prime-logo" href="index.html">prime video</a>
+    </div>
+  </header>
+  <main class="auth-page-main container">
+    <section class="auth-card">
+      <div class="auth-brand">YOUR ACCOUNT</div>
+      <h1>Sign in to Stackly</h1>
+      <p class="auth-subtitle">Enter your email and password to access your movies, shows and watchlist.</p>
+      <form class="auth-form" action="#" id="signin-form">
+        <label>
+          Email address
+          <input type="email" id="signin-email" placeholder="you@example.com" required />
+        </label>
+        <label>
+          Password
+          <input type="password" id="signin-password" placeholder="Enter your password" required />
+        </label>
+        <button type="submit" class="btn primary">Sign In</button>
+      </form>
+      <div class="auth-footer">
+        <a href="#">Need help?</a>
+        <a href="index.html">Back to Home</a>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.getElementById('signin-form')?.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const email = document.getElementById('signin-email').value.trim();
+      const password = document.getElementById('signin-password').value.trim();
+      if (!email || !password) {
+        alert('Please enter both email and password.');
+        return;
+      }
+      alert('Sign in successful (demo).');
+    });
+  </script>
+</body>
+</html>

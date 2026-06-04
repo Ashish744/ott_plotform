@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Stackly — Home</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="nav-inner container">
+				<div class="nav-left">
+					<a class="prime-logo" href="#featured">
+						<img src="logo (1).webp" alt="Stackly logo" />
+					</a>
+					<nav class="main-nav">
+						<a href="#featured" class="active">Home</a>
+						<a href="#collections" data-mega="movies" class="movies-link">Movies</a>
+						<a href="#genres">TV shows</a>
+						<a href="404.html">Live TV</a>
+						<a href="404.html">Subscriptions</a>
+						<!-- Mega menu for Movies (appears on hover) -->
+						<div class="mega-menu" id="mega-movies" aria-hidden="true">
+							<div class="mega-inner">
+								<div class="mega-col">
+									<h4>GENRES</h4>
+									<ul>
+										<li><a href="404.html">Action and adventure</a></li>
+										<li><a href="404.html">Mystery and thrillers</a></li>
+										<li><a href="404.html">Romance</a></li>
+										<li><a href="404.html">Science fiction</a></li>
+										<li><a href="404.html">Documentary</a></li>
+										<li><a href="404.html">Fantasy</a></li>
+										<li><a href="404.html">Horror</a></li>
+										<li><a href="404.html">Kids</a></li>
+									</ul>
+								</div>
+								<div class="mega-col mega-right">
+									<h4>FEATURED COLLECTIONS</h4>
+									<ul>
+										<li><a href="404.html">Home Premiere</a></li>
+										<li><a href="404.html">New Releases</a></li>
+										<li><a href="404.html">MX Player</a></li>
+										<li><a href="404.html">Critically acclaimed</a></li>
+										<li><a href="404.html">Kids</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</nav>
+				</div>
+				<div class="nav-right">
+					<a class="lang" href="404.html">EN ▾</a>
+					<a class="icon-btn" href="404.html" aria-label="Apps">◻◻◻</a>
+					<div class="profile-menu">
+						<button class="avatar" aria-label="Account" aria-haspopup="true" aria-expanded="false"></button>
+						<div class="profile-dropdown" aria-hidden="true">
+							<div class="profile-head">YOUR ACCOUNT</div>
+							<a href="signin.html">Sign In</a>
+							<a href="404.html">Help</a>
+							<a href="404.html">Watch Anywhere</a>
+						</div>
+					</div>
+					<a class="join-btn" href="404.html">Join Prime</a>
+					<button class="hamburger" id="mobileMenuBtn" aria-expanded="false" aria-label="Open menu">☰</button>
+				</div>
+				<div class="mobile-menu-panel" id="mobileMenuPanel" aria-hidden="true">
+					<div class="mobile-menu-group">
+						<a href="#featured">Home</a>
+						<a href="#collections">Movies</a>
+						<a href="#genres">TV shows</a>
+						<a href="404.html">Live TV</a>
+						<a href="404.html">Subscriptions</a>
+					</div>
+					<div class="mobile-menu-group">
+						<a href="404.html">EN ▾</a>
+						<a href="404.html">Apps</a>
+					</div>
+					<div class="mobile-menu-group">
+						<a href="signin.html">Sign In</a>
+						<a href="404.html">Help</a>
+						<a href="404.html">Watch Anywhere</a>
+					</div>
+					<a class="join-btn mobile-join" href="404.html">Join Prime</a>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section id="featured" class="movie-hero">
+				<div class="movie-hero-inner container">
+					<div class="poster" aria-hidden="true">
+						<div class="poster-layer poster-current" style="background-image:url('ott1.webp')"></div>
+						<div class="poster-layer poster-next"></div>
+					</div>
+					<div class="meta">
+						<div class="badge">Included with Stackly</div>
+						<h1 class="movie-title">Sample Movie Title</h1>
+						<div class="submeta">2024 • 2h 13m • Action, Drama • U/A 16+</div>
+						<p class="movie-desc">A gripping story of courage and betrayal. This sample synopsis mirrors the feel of the Prime Video movie detail page — bold, concise and enticing.</p>
+						<div class="actions-row">
+							<button class="btn primary play">▶ Play</button>
+							<button class="btn">+ Watchlist</button>
+							<button class="btn ghost">Share</button>
+						</div>
+						<div class="info-row">
+							<div><strong>Starring:</strong> Actor A, Actor B, Actor C</div>
+							<div><strong>Director:</strong> Director Name</div>
+						</div>
+					</div>
+				</div>
+				<div class="hero-card-row" id="heroCardRow">
+					<button class="hero-card active" data-movie="0" style="background-image:url('ott1.webp')" aria-label="Sample Movie Title"><span>Sample Movie Title</span></button>
+					<button class="hero-card" data-movie="1" style="background-image:url('ott3.webp')" aria-label="Neon Runners"><span>Neon Runners</span></button>
+					<button class="hero-card" data-movie="2" style="background-image:url('ott7.webp')" aria-label="Dark Horizons"><span>Dark Horizons</span></button>
+					<button class="hero-card" data-movie="3" style="background-image:url('ott9.webp')" aria-label="City Patrol"><span>City Patrol</span></button>
+				</div>
+			</section>
+
+			<!-- movie detail tabs -->
+			<section class="movie-tabs container">
+				<nav class="tabs">
+					<button class="tab active" data-tab="overview">Overview</button>
+					<button class="tab" data-tab="cast">Cast</button>
+					<button class="tab" data-tab="details">Details</button>
+					<button class="tab" data-tab="more">More Like This</button>
+				</nav>
+				<div class="tab-panels">
+					<div class="panel" id="overview">
+						<p class="fade-in">An extended synopsis and highlights. This overview gives users a quick sense of tone, plot, and why they should watch.</p>
+					</div>
+					<div class="panel" id="cast" hidden>
+						<div class="cast-list">
+						<div class="cast-thumb"><img src="ott2.webp" alt="Actor"><span>Actor A</span></div>
+						<div class="cast-thumb"><img src="ott3.webp" alt="Actor"><span>Actor B</span></div>
+						<div class="cast-thumb"><img src="ott4.webp" alt="Actor"><span>Actor C</span></div>
+						<div class="cast-thumb"><img src="ott5.webp" alt="Actor"><span>Actor D</span></div>
+						</div>
+					</div>
+					<div class="panel" id="details" hidden>
+						<ul>
+							<li><strong>Language:</strong> English</li>
+							<li><strong>Subtitles:</strong> English, Spanish, French</li>
+							<li><strong>Genres:</strong> Action, Drama</li>
+						</ul>
+					</div>
+					<div class="panel" id="more" hidden>
+						<div class="more-grid">
+						<article class="more-item" style="background-image:url('card1.webp')">
+							<div class="item-overlay">
+								<span class="item-label">Recommended</span>
+							<h4>Dark Horizons</h4>
+							<button class="item-action">▶ Play</button>
+						</div>
+						</article>
+						<article class="more-item" style="background-image:url('card2.webp')">
+							<div class="item-overlay">
+								<span class="item-label">Trending</span>
+							<h4>City Patrol</h4>
+							<button class="item-action">▶ Play</button>
+						</div>
+						</article>
+						<article class="more-item" style="background-image:url('card3.webp')">
+							<div class="item-overlay">
+								<span class="item-label">New</span>
+							<h4>Solar Drift</h4>
+							<button class="item-action">▶ Play</button>
+						</div>
+						</article>
+						<article class="more-item" style="background-image:url('card4.webp')">
+							<div class="item-overlay">
+								<span class="item-label">Must Watch</span>
+							<h4>Shadow Market</h4>
+							<button class="item-action">▶ Play</button>
+						</div>
+						</article>
+						<article class="more-item" style="background-image:url('card5.webp')">
+							<div class="item-overlay">
+								<span class="item-label">Exclusive</span>
+							<h4>Neon Runners</h4>
+							<button class="item-action">▶ Play</button>
+						</div>
+						</article>
+						<article class="more-item" style="background-image:url('card6.webp')">
+							<div class="item-overlay">
+								<span class="item-label">Popular</span>
+							<h4>Midnight Call</h4>
+							<button class="item-action">▶ Play</button>
+						</div>
+						</article>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="featured" class="section featured container">
+				<h2 class="section-title">Featured Collections</h2>
+				<div class="carousel" data-carousel>
+					<div class="carousel-track">
+						<article class="card large">
+							<img src="ott7.webp" alt="Epic drama" />
+							<div class="card-info">
+								<h3>Epic Drama</h3>
+								<p class="card-meta">Adventure · award-winning · cinematic</p>
+								<p>Intense stories and unforgettable emotions delivered by a star-studded cast.</p>
+								<div class="card-cta"><button class="btn primary play">▶ Play</button></div>
+							</div>
+						</article>
+
+						<article class="card large">
+							<img src="ott9.webp" alt="Comedy picks" />
+							<div class="card-info">
+								<h3>Laugh Out Loud</h3>
+								<p class="card-meta">Comedy · feel-good · popular</p>
+								<p>Fresh stand-up specials, hilarious series, and uplifting family-friendly originals.</p>
+								<div class="card-cta"><button class="btn primary play">▶ Play</button></div>
+							</div>
+						</article>
+
+						<article class="card large">
+							<img src="section6.webp" alt="Documentaries" />
+							<div class="card-info">
+								<h3>Documentaries</h3>
+								<p class="card-meta">True stories · cultural · inspiring</p>
+								<p>Discover unforgettable real-life journeys, science breakthroughs, and cultural epics.</p>
+								<div class="card-cta"><button class="btn primary play">▶ Play</button></div>
+							</div>
+						</article>
+
+						<article class="card large">
+							<img src="section7.webp" alt="Thriller" />
+							<div class="card-info">
+								<h3>Edge of Night</h3>
+								<p class="card-meta">Thriller · suspense · binge-worthy</p>
+								<p>A tense, edge-of-your-seat collection of crime dramas and psychological thrillers.</p>
+								<div class="card-cta"><button class="btn primary play">▶ Play</button></div>
+							</div>
+						</article>
+
+						<article class="card large">
+							<img src="section8.webp" alt="Comedy" />
+							<div class="card-info">
+								<h3>City Laughs</h3>
+								<p class="card-meta">Comedy · satire · crowd-pleaser</p>
+								<p>Bright, funny series and sketch shows for a perfect weekend watch.</p>
+								<div class="card-cta"><button class="btn primary play">▶ Play</button></div>
+							</div>
+						</article>
+
+						<article class="card large">
+							<img src="section9.webp" alt="Sci-fi" />
+							<div class="card-info">
+								<h3>Tomorrow's World</h3>
+								<p class="card-meta">Sci-fi · visionary · immersive</p>
+								<p>Explore futuristic worlds, high-concept thrillers, and bold science fiction adventures.</p>
+								<div class="card-cta"><button class="btn primary play">▶ Play</button></div>
+							</div>
+						</article>
+					</div>
+
+					<div class="carousel-nav">
+						<button class="nav-prev" aria-label="Previous">‹</button>
+						<button class="nav-next" aria-label="Next">›</button>
+					</div>
+				</div>
+			</section>
+
+			<!-- Top 10 TV shows in India -->
+			<section class="section row-section container">
+				<div class="row-head">
+					<h3>Top 10 TV shows in India</h3>
+				</div>
+				<div class="row-scroller top10" data-scroller>
+					<div class="tv-card" style="background-image:url('section1.webp')">
+						<span class="card-number">1</span>
+						<span class="card-badge">NEW SERIES</span>
+						<span class="card-logo">prime</span>
+						<div class="card-details">
+							<h4 class="card-title">Off Campus</h4>
+							<div class="card-meta">U/A 16+ · 2024 · 1 season</div>
+							<p class="card-desc">Hannah tutors hockey captain Garrett to win her crush. Their fake deal becomes real as they confront pasts and rivals.</p>
+							<div class="card-cta"><button class="btn primary play">▶ Play</button><button class="btn">+ Watchlist</button></div>
+						</div>
+					</div>
+						<div class="tv-card" style="background-image:url('section2.webp')">
+						<span class="card-number">2</span>
+						<span class="card-badge">NEW SEASON</span>
+						<span class="card-logo">prime</span>
+						<div class="card-details">
+							<h4 class="card-title">Spider-Noir</h4>
+							<div class="card-meta">TV-MA · 2023 · 2 seasons</div>
+							<p class="card-desc">A darker, grittier take on the web-slinger — crime, conscience, and city shadows collide in high-octane drama.</p>
+							<div class="card-cta"><button class="btn primary play">▶ Play</button><button class="btn">+ Watchlist</button></div>
+						</div>
+					</div>
+						<div class="tv-card" style="background-image:url('section3.webp')">
+						<span class="card-number">3</span>
+						<span class="card-badge">NEW EPISODE</span>
+						<span class="card-logo">prime</span>
+						<div class="card-details">
+							<h4 class="card-title">From</h4>
+							<div class="card-meta">TV-14 · 2022 · 1 season</div>
+							<p class="card-desc">Mysterious arrivals transform a sleepy town — chilling tension, eerie relationships, and survival stakes.</p>
+							<div class="card-cta"><button class="btn primary play">▶ Play</button><button class="btn">+ Watchlist</button></div>
+						</div>
+					</div>
+						<div class="tv-card" style="background-image:url('section4.webp')">
+						<span class="card-number">4</span>
+						<span class="card-badge">TOP 10</span>
+						<span class="card-logo">prime</span>
+						<div class="card-details">
+							<h4 class="card-title">Matka King</h4>
+							<div class="card-meta">TV-MA · 2025 · 1 season</div>
+							<p class="card-desc">A gritty crime saga exploring the rise and fall of a gambling kingpin and the families he entangles.</p>
+							<div class="card-cta"><button class="btn primary play">▶ Play</button><button class="btn">+ Watchlist</button></div>
+						</div>
+					</div>
+						<div class="tv-card" style="background-image:url('section5.webp')">
+						<span class="card-number">5</span>
+						<span class="card-badge">TRENDING</span>
+						<span class="card-logo">prime</span>
+						<div class="card-details">
+							<h4 class="card-title">Panchayat</h4>
+							<div class="card-meta">PG · 2021 · 3 seasons</div>
+							<p class="card-desc">A small-town comedy-drama about an engineering graduate who becomes a panchayat secretary by chance.</p>
+							<div class="card-cta"><button class="btn primary play">▶ Play</button><button class="btn">+ Watchlist</button></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Recently added TV -->
+			<section class="section row-section container">
+				<div class="row-head">
+					<h3>Recently added TV</h3>
+					<button class="btn ghost small">See more</button>
+				</div>
+				<div class="row-scroller" data-scroller>
+					<div class="tv-card" style="background-image:url('section6.webp')">
+						<span class="card-badge">TOP 10</span>
+						<span class="card-logo">prime</span>
+						<div class="card-details">
+							<h4 class="card-title">The Boys</h4>
+							<div class="card-meta">TV-MA · 2019 · 4 seasons</div>
+							<p class="card-desc">A cops-and-vigilantes story where superheroes abuse power and a group of vigilantes fight back.</p>
+							<div class="card-cta"><button class="btn primary play">▶ Play</button><button class="btn">+ Watchlist</button></div>
+						</div>
+					</div>
+						<div class="tv-card" style="background-image:url('section7.webp')">
+						<span class="card-badge">TRENDING</span>
+						<span class="card-logo">prime</span>
+						<div class="card-details">
+							<h4 class="card-title">Spider-Noir</h4>
+							<div class="card-meta">TV-MA · 2023 · 2 seasons</div>
+							<p class="card-desc">A darker, grittier take on the web-slinger — crime, conscience, and city shadows collide in high-octane drama.</p>
+							<div class="card-cta"><button class="btn primary play">▶ Play</button><button class="btn">+ Watchlist</button></div>
+						</div>
+					</div>
+						<div class="tv-card" style="background-image:url('section8.webp')">
+						<span class="card-badge">NEW SERIES</span>
+						<span class="card-logo">prime</span>
+						<div class="card-details">
+							<h4 class="card-title">Exam</h4>
+							<div class="card-meta">TV-14 · 2026 · 1 season</div>
+							<p class="card-desc">Campus thriller following brilliant students forced into a high-stakes game of secrets and survival.</p>
+							<div class="card-cta"><button class="btn primary play">▶ Play</button><button class="btn">+ Watchlist</button></div>
+						</div>
+					</div>
+						<div class="tv-card" style="background-image:url('section9.webp')">
+						<span class="card-badge">NEW SEASON</span>
+						<span class="card-logo">prime</span>
+						<div class="card-details">
+							<h4 class="card-title">Citadel</h4>
+							<div class="card-meta">TV-14 · 2023 · 2 seasons</div>
+							<p class="card-desc">A globe-trotting spy thriller with high-stakes action and a conspiracy that spans nations.</p>
+							<div class="card-cta"><button class="btn primary play">▶ Play</button><button class="btn">+ Watchlist</button></div>
+						</div>
+					</div>
+					<div class="tv-card" style="background-image:url('card7.webp')">
+						<span class="card-badge">TRENDING</span>
+						<span class="card-logo">prime</span>
+						<div class="card-details">
+							<h4 class="card-title">Lukkhe</h4>
+							<div class="card-meta">TV-MA · 2026 · 1 season</div>
+							<p class="card-desc">A raw story of drugs, gang wars and family loyalty — power struggles threaten everything.</p>
+							<div class="card-cta"><button class="btn primary play">▶ Play</button><button class="btn">+ Watchlist</button></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Drama TV -->
+			<section class="section row-section container">
+				<div class="row-head">
+					<h3>Drama TV</h3>
+					<button class="btn ghost small">See more</button>
+				</div>
+				<div class="row-scroller" data-scroller>
+						<div class="tv-card" style="background-image:url('section10.webp')">
+						<span class="card-badge">NEW EPISODE</span>
+						<span class="card-logo">prime</span>
+						<div class="card-details">
+							<h4 class="card-title">The Last Stand</h4>
+							<div class="card-meta">TV-14 · 2024 · 2 seasons</div>
+							<p class="card-desc">A retired detective is pulled back into the fray when a cold case resurfaces.</p>
+							<div class="card-cta"><button class="btn primary play">▶ Play</button><button class="btn">+ Watchlist</button></div>
+						</div>
+					</div>
+					<div class="tv-card" style="background-image:url('section9.webp')">
+						<span class="card-badge">TOP 10</span>
+						<span class="card-logo">prime</span>
+						<div class="card-details">
+							<h4 class="card-title">Broken City</h4>
+							<div class="card-meta">TV-MA · 2022 · 3 seasons</div>
+							<p class="card-desc">Corruption and redemption collide in a city where everyone has something to hide.</p>
+							<div class="card-cta"><button class="btn primary play">▶ Play</button><button class="btn">+ Watchlist</button></div>
+						</div>
+					</div>
+					<div class="tv-card" style="background-image:url('section8.webp')">
+						<span class="card-badge">NEW SEASON</span>
+						<span class="card-logo">prime</span>
+						<div class="card-details">
+							<h4 class="card-title">Family Ties</h4>
+							<div class="card-meta">PG · 2023 · 4 seasons</div>
+							<p class="card-desc">A multigenerational family navigates love, loss and loyalty in changing times.</p>
+							<div class="card-cta"><button class="btn primary play">▶ Play</button><button class="btn">+ Watchlist</button></div>
+						</div>
+					</div>
+					<div class="tv-card" style="background-image:url('section7.webp')">
+						<span class="card-badge">TRENDING</span>
+						<span class="card-logo">prime</span>
+						<div class="card-details">
+							<h4 class="card-title">City of Ash</h4>
+							<div class="card-meta">TV-14 · 2025 · 1 season</div>
+							<p class="card-desc">A gripping crime saga that follows a city's descent into chaos and the people who survive it.</p>
+							<div class="card-cta"><button class="btn primary play">▶ Play</button><button class="btn">+ Watchlist</button></div>
+						</div>
+					</div>
+					<div class="tv-card" style="background-image:url('section6.webp')">
+						<span class="card-badge">NEW SERIES</span>
+						<span class="card-logo">prime</span>
+						<div class="card-details">
+							<h4 class="card-title">Hidden Paths</h4>
+							<div class="card-meta">TV-MA · 2026 · 1 season</div>
+							<p class="card-desc">Strangers' lives intersect in unexpected ways in this character-driven drama.</p>
+							<div class="card-cta"><button class="btn primary play">▶ Play</button><button class="btn">+ Watchlist</button></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="collections" class="section collections">
+				<h2 class="section-title container">Collections You’ll Love</h2>
+				<div class="rows container">
+					<div class="row" data-row>
+						<h3 class="row-title">Top picks for you</h3>
+						<div class="thumbnails">
+							<div class="thumb" style="background-image:url('section8.webp')">
+								<div class="thumb-overlay">
+									<div>
+										<h4 class="thumb-title">Neon Nights</h4>
+									</div>
+									<button class="thumb-action">▶ Play</button>
+								</div>
+							</div>
+							<div class="thumb" style="background-image:url('section6.webp')">
+								<div class="thumb-overlay">
+									<div>
+										<h4 class="thumb-title">Skyline Run</h4>
+									</div>
+									<button class="thumb-action">▶ Play</button>
+								</div>
+							</div>
+							<div class="thumb" style="background-image:url('section7.webp')">
+								<div class="thumb-overlay">
+									<div>
+										<h4 class="thumb-title">Hidden Truths</h4>
+									</div>
+									<button class="thumb-action">▶ Play</button>
+								</div>
+							</div>
+						<div class="thumb" style="background-image:url('section5.webp')">
+								<div class="thumb-overlay">
+									<div>
+										<h4 class="thumb-title">Pulse</h4>
+									</div>
+									<button class="thumb-action">▶ Play</button>
+								</div>
+							</div>
+							<div class="thumb" style="background-image:url('section9.webp')">
+								<div class="thumb-overlay">
+									<div>
+										<h4 class="thumb-title">Wild Heart</h4>
+									</div>
+									<button class="thumb-action">▶ Play</button>
+								</div>
+							</div>
+							<div class="thumb" style="background-image:url('section10.webp')">
+								<div class="thumb-overlay">
+									<div>
+										<h4 class="thumb-title">Rise Up</h4>
+									</div>
+									<button class="thumb-action">▶ Play</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row" data-row>
+						<h3 class="row-title">New and Noteworthy</h3>
+						<div class="thumbnails">
+							<div class="thumb" style="background-image:url('section4.webp')">
+								<div class="thumb-overlay">
+									<div>
+										<h4 class="thumb-title">Electric Age</h4>
+									</div>
+									<button class="thumb-action">▶ Play</button>
+								</div>
+							</div>
+							<div class="thumb" style="background-image:url('section5.webp')">
+								<div class="thumb-overlay">
+									<div>
+										<h4 class="thumb-title">Night Watch</h4>
+									</div>
+									<button class="thumb-action">▶ Play</button>
+								</div>
+							</div>
+						<div class="thumb" style="background-image:url('section1.webp')">
+								<div class="thumb-overlay">
+									<div>
+										<h4 class="thumb-title">Breaking Point</h4>
+									</div>
+									<button class="thumb-action">▶ Play</button>
+								</div>
+							</div>
+						<div class="thumb" style="background-image:url('section2.webp')">
+								<div class="thumb-overlay">
+									<div>
+										<h4 class="thumb-title">Afterglow</h4>
+									</div>
+									<button class="thumb-action">▶ Play</button>
+								</div>
+							</div>
+						<div class="thumb" style="background-image:url('section3.webp')">
+								<div class="thumb-overlay">
+									<div>
+										<h4 class="thumb-title">Broken Hour</h4>
+									</div>
+									<button class="thumb-action">▶ Play</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="genres" class="section genres container">
+				<h2 class="section-title">Explore by Genre</h2>
+				<div class="genre-grid">
+					<a class="genre" href="#">Action</a>
+					<a class="genre" href="#">Romance</a>
+					<a class="genre" href="#">Sci-fi</a>
+					<a class="genre" href="#">Horror</a>
+					<a class="genre" href="#">Family</a>
+					<a class="genre" href="#">Kids</a>
+				</div>
+			</section>
+
+			<section id="new" class="section spotlight">
+				<div class="container spotlight-inner">
+					<div class="spot-media"></div>
+					<div class="spot-text">
+                        <span class="spot-tag">Prime Originals</span>
+						<h2>Originals to binge</h2>
+						<p>Exclusive Originals with new seasons dropping every month. Stream in beautiful HDR with curated stories for every mood.</p>
+                        <div class="spot-highlights">
+                            <div>New episodes weekly</div>
+                            <div>4K HDR streaming</div>
+                            <div>Family-friendly picks</div>
+                        </div>
+						<div class="cta-row">
+							<button class="btn primary play">▶ Play</button>
+                            <button class="btn">+ Watchlist</button>
+							<a class="muted" href="#">See full list</a>
+						</div>
+					</div>
+				</div>
+		</section>
+
+		<section class="section container more-like">
+			<h2 class="section-title">More Like This</h2>
+			<div class="more-grid big-grid">
+				<div class="more-item" style="background-image:url('section1.webp')">
+					<div class="item-overlay">
+						<div>
+							<div class="item-label">Recommended</div>
+							<h4 class="item-title">Shadow Run</h4>
+						</div>
+						<button class="item-action">▶ Play</button>
+					</div>
+				</div>
+				<div class="more-item" style="background-image:url('section2.webp')">
+					<div class="item-overlay">
+						<div>
+							<div class="item-label">Trending</div>
+							<h4 class="item-title">Midnight Chase</h4>
+						</div>
+						<button class="item-action">▶ Play</button>
+					</div>
+				</div>
+				<div class="more-item" style="background-image:url('section3.webp')">
+					<div class="item-overlay">
+						<div>
+							<div class="item-label">New Release</div>
+							<h4 class="item-title">City of Lies</h4>
+						</div>
+						<button class="item-action">▶ Play</button>
+					</div>
+				</div>
+				<div class="more-item" style="background-image:url('section4.webp')">
+					<div class="item-overlay">
+						<div>
+							<div class="item-label">Just Added</div>
+							<h4 class="item-title">The Final Act</h4>
+						</div>
+						<button class="item-action">▶ Play</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-grid">
+			<div class="footer-col about">
+				<div class="footer-logo">
+						<span class="footer-logo-text">Stackly <strong>Movie</strong></span>
+					</div>
+					<h4>About Stackly</h4>
+					<p>Stackly is your home for movies and series — curated picks, Originals and recommendations for every mood.</p>
+				</div>
+				<div class="footer-col explore">
+					<h4>Explore</h4>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Movies</a></li>
+						<li><a href="#">Series</a></li>
+						<li><a href="#">Kids</a></li>
+					</ul>
+				</div>
+				<div class="footer-col support">
+					<h4>Support</h4>
+					<ul>
+						<li><a href="404.html">Help Center</a></li>
+						<li><a href="404.html">Contact Us</a></li>
+						<li><a href="404.html">Accessibility</a></li>
+					</ul>
+				</div>
+				<div class="footer-col legal">
+					<h4>Legal</h4>
+					<ul>
+						<li><a href="404.html">Terms of Use</a></li>
+						<li><a href="404.html">Privacy</a></li>
+						<li><a href="404.html">Cookies</a></li>
+					</ul>
+				</div>
+				<div class="footer-col newsletter">
+					<h4>Stay in the loop</h4>
+					<form id="newsletter-form">
+						<input id="newsletter-email" type="email" placeholder="Your email address" required />
+						<button class="btn primary" type="submit">Subscribe</button>
+					</form>
+					<div class="socials">
+						<a href="404.html" class="social" aria-label="Twitter">Twitter</a>
+						<a href="404.html" class="social" aria-label="Instagram">Instagram</a>
+						<a href="404.html" class="social" aria-label="Facebook">Facebook</a>
+					</div>
+				</div>
+			</div>
+			<div class="container footer-bottom">
+				<div>© 2026 Stackly — All rights reserved</div>
+				<nav class="footer-nav">
+					<a href="404.html">Privacy</a>
+					<a href="404.html">Terms</a>
+					<a href="404.html">Site map</a>
+				</nav>
+			</div>
+			<button id="back-to-top" aria-label="Back to top">↑</button>
+		</footer>
+
+		<div class="auth-modal" id="auth-modal" aria-hidden="true">
+			<video class="auth-video-bg" autoplay muted loop playsinline>
+				<source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+			</video>
+			<div class="auth-overlay"></div>
+			<div class="auth-panel">
+				<button class="close" aria-label="Close sign in">✕</button>
+				<div class="auth-brand">
+					<span class="auth-logo">Stackly</span>
+					<p>Sign in to continue watching your favorite titles.</p>
+				</div>
+				<form id="auth-form">
+					<label for="auth-email">Email address</label>
+					<input id="auth-email" type="email" placeholder="you@example.com" required />
+					<label for="auth-pass">Password</label>
+					<input id="auth-pass" type="password" placeholder="Enter password" required />
+					<div class="auth-actions">
+						<button class="btn primary" type="submit">Sign In</button>
+						<button class="btn ghost" type="button" id="auth-cancel">Cancel</button>
+					</div>
+					<div class="auth-meta">
+						<p>Secure login with stacked encrypted access.</p>
+						<a href="#">Need help?</a>
+					</div>
+					<div class="auth-socials">
+						<button class="btn ghost">Continue with Google</button>
+						<button class="btn ghost">Continue with Apple</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

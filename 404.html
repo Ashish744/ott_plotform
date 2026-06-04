@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>404 — Page not found</title>
+  <style>
+    :root{--bg:#071226;--card:#0f2740;--accent:#ff6b6b;--accent-2:#7b61ff;--muted:rgba(255,255,255,0.7)}
+    *, *::before, *::after{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial;color:#fff;background:linear-gradient(180deg,#031018 0%, #071226 40%);overflow-x:hidden}
+    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:48px;overflow-x:hidden}
+    .panel{width:100%;max-width:1100px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(0,0,0,0.12));border-radius:18px;padding:36px;box-shadow:0 40px 140px rgba(2,6,23,0.7);position:relative;overflow:hidden}
+    /* animated gradient backdrop */
+    .panel::before{content:'';position:absolute;inset:-40%;background:conic-gradient(from 180deg at 50% 50%, rgba(123,97,255,0.12), rgba(255,107,107,0.08), rgba(123,97,255,0.06));opacity:1;filter:blur(36px);transform:scale(1.6);animation:spin 18s linear infinite;pointer-events:none}
+    @keyframes spin{to{transform:scale(1.6) rotate(360deg)}}
+
+    .grid{display:grid;grid-template-columns:260px 1fr;gap:28px;align-items:center}
+    .left{display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+    .code{font-weight:900;font-size:128px;letter-spacing:-6px;color:transparent;background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;text-shadow:0 18px 60px rgba(123,97,255,0.06)}
+    .sub{font-size:18px;color:var(--muted);max-width:260px}
+    .cta-row{display:flex;gap:12px;margin-top:8px}
+    .btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));border:0;color:#08101a;padding:12px 18px;border-radius:12px;font-weight:800;cursor:pointer;box-shadow:0 14px 40px rgba(123,97,255,0.12);transition:transform .18s ease,box-shadow .18s ease}
+    .btn:hover{transform:translateY(-4px);box-shadow:0 26px 80px rgba(123,97,255,0.14)}
+    .ghost{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px}
+
+    .right{display:flex;flex-direction:column;gap:14px}
+    .scene{display:flex;gap:14px;align-items:center}
+    .card{width:220px;height:140px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));box-shadow:0 18px 50px rgba(2,6,23,0.6);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;transition:transform .22s cubic-bezier(.2,.9,.2,1),box-shadow .22s ease}
+    .card .label{font-weight:800;color:var(--muted);font-size:14px}
+    .card:hover{transform:translateY(-14px) scale(1.04);box-shadow:0 40px 120px rgba(2,6,23,0.75)}
+    .floating{position:absolute;right:-80px;bottom:-60px;width:360px;height:360px;border-radius:20px;background:radial-gradient(circle at 30% 30%, rgba(255,107,107,0.06), transparent 20%),linear-gradient(180deg,rgba(123,97,255,0.03),transparent);transform:rotate(12deg);filter:blur(28px);opacity:.9}
+
+    .hint{color:var(--muted);font-size:13px;margin-top:8px}
+    .search{margin-top:10px;width:100%;max-width:480px;display:flex;gap:8px}
+    .search input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);color:#fff}
+    .search button{padding:10px 12px;border-radius:10px;border:0;background:rgba(255,255,255,0.06);color:#fff}
+
+    @media (max-width:880px){
+      .grid{grid-template-columns:1fr;}
+      .code{font-size:96px}
+      .panel{padding:22px}
+      .left{align-items:center;text-align:center}
+      .search{justify-content:center}
+      .scene{justify-content:center;flex-wrap:wrap}
+      .scene .card{width:180px;height:120px}
+      .right > div{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+      .right > div .card{width:140px;height:100px}
+      .floating{display:none}
+      .wrap{padding:24px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="panel" role="main">
+      <div class="grid">
+        <div class="left">
+          <div class="code">404</div>
+          <div class="sub">We can't find the page you're looking for. It may have been removed, had its name changed, or is temporarily unavailable.</div>
+          <div class="cta-row">
+            <a href="index.html" class="btn">Return Home</a>
+            <button class="ghost" id="report">Report issue</button>
+          </div>
+          <div class="search" aria-hidden="true">
+            <input placeholder="Search titles, actors or genres" />
+            <button>Go</button>
+          </div>
+          <div class="hint">Tip: Try searching or go back to the homepage. Hover the cards on the right.</div>
+        </div>
+        <div class="right">
+          <div class="scene">
+            <div class="card" data-tilt>
+              <div class="label">Top Picks</div>
+            </div>
+            <div class="card" data-tilt>
+              <div class="label">New Releases</div>
+            </div>
+            <div class="card" data-tilt>
+              <div class="label">Trending</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:12px">
+            <div class="card" data-tilt style="width:140px;height:100px"><div class="label">Drama</div></div>
+            <div class="card" data-tilt style="width:140px;height:100px"><div class="label">Comedy</div></div>
+            <div class="card" data-tilt style="width:140px;height:100px"><div class="label">Sci‑Fi</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="floating" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <script>
+    // simple tilt effect
+    function attachTilt(selector, strength=10){
+      document.querySelectorAll(selector).forEach(el=>{
+        el.style.transformOrigin = 'center';
+        let raf=null;
+        el.addEventListener('mousemove', e=>{
+          const r = el.getBoundingClientRect();
+          const px = (e.clientX - r.left)/r.width - 0.5;
+          const py = (e.clientY - r.top)/r.height - 0.5;
+          const ry = px * strength;
+          const rx = -py * strength;
+          if(raf) cancelAnimationFrame(raf);
+          raf = requestAnimationFrame(()=> el.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(8px)`);
+        });
+        el.addEventListener('mouseleave', ()=>{ el.style.transform=''; if(raf) cancelAnimationFrame(raf); });
+      });
+    }
+    attachTilt('[data-tilt]',8);
+
+    // playful floating motion
+    (function(){
+      const f = document.querySelector('.floating');
+      let t=0; function step(){ t+=0.01; if(f) f.style.transform = `translateY(${Math.sin(t)*6}px) rotate(${t*8}deg)`; requestAnimationFrame(step);} step();
+    })();
+
+    // report button handler
+    document.getElementById('report').addEventListener('click', ()=>{
+      alert('Thanks — issue report simulated (demo).');
+    });
+
+    // allow Enter to go home from search
+    document.querySelector('.search input').addEventListener('keydown', e=>{ if(e.key==='Enter') window.location.href='index.html'; });
+  </script>
+</body>
+</html>
