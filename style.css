@@ -19,7 +19,7 @@ body{
 }
 .container{max-width:var(--container);margin:0 auto;padding:0 20px}
 .site-header{backdrop-filter:blur(6px);position:sticky;top:0;z-index:40;background:linear-gradient(180deg,rgba(2,6,23,0.6),transparent)}
-.nav-inner{display:flex;align-items:center;gap:20px;justify-content:space-between;padding:14px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
 .brand{font-weight:700;color:var(--accent-2);font-size:20px;text-decoration:none;transition:transform .22s cubic-bezier(.2,.9,.2,1),text-shadow .22s ease}
 .brand:hover{transform:translateY(-3px) scale(1.03);text-shadow:0 10px 30px rgba(123,97,255,0.14)}
 .main-nav a{color:var(--muted);text-decoration:none;margin:0 10px;font-weight:600;position:relative;padding:6px 4px;transition:color .18s ease,transform .18s ease}
@@ -79,13 +79,13 @@ body{
 .site-header.condensed{background:linear-gradient(180deg,rgba(2,6,23,0.9),rgba(2,6,23,0.6));box-shadow:0 6px 18px rgba(0,0,0,0.5)}
 
 /* Prime-style navbar tweaks */
-.nav-left{display:flex;align-items:center;gap:20px}
-.prime-logo{display:inline-flex;align-items:center;text-decoration:none;padding-right:6px}
-.prime-logo img{height:80px;max-width:220px;width:auto;display:block}
+.nav-left{display:flex;align-items:center;gap:12px;flex:0 0 auto}
+.prime-logo{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:0}
+.prime-logo img{height:80px;max-width:250px;width:auto;display:block;object-fit:contain}
 .main-nav{display:flex;align-items:center;gap:6px;position:relative;z-index:50}
 .main-nav a{padding:8px 14px;border-radius:999px;background:transparent;color:var(--muted);font-weight:700;position:relative}
 .main-nav a.active{background:rgba(255,255,255,0.08);color:#fff;box-shadow:0 8px 30px rgba(0,0,0,0.5);backdrop-filter:blur(6px)}
-.nav-right{display:flex;align-items:center;gap:12px}
+.nav-right{display:flex;align-items:center;gap:12px;flex:1 0 auto;justify-content:flex-end}
 .footer-logo img{height:40px;width:auto;display:block;margin-bottom:14px}
 .footer-logo-text{display:block;font-size:1.5rem;font-weight:900;line-height:1.1;margin-bottom:14px;background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;color:transparent;text-shadow:0 1px 2px rgba(0,0,0,0.25)}
 .footer-logo-text strong{font-weight:900;color:#fff;-webkit-text-fill-color:#fff;text-shadow:none}
@@ -96,12 +96,12 @@ body{
 .join-btn{background:linear-gradient(90deg,#2ea8ff,#2a8fff);color:#fff;padding:10px 14px;border-radius:12px;font-weight:800;text-decoration:none}
 .join-btn:hover{filter:brightness(1.03);transform:translateY(-2px)}
 
-.hamburger{display:none;background:rgba(255,255,255,0.06);border:0;color:#fff;font-size:28px;padding:10px 12px;border-radius:12px;cursor:pointer;align-items:center;justify-content:center;transition:background .18s ease,transform .18s ease}
+.hamburger{display:none;background:rgba(255,255,255,0.06);border:0;color:#fff;font-size:24px;padding:8px 10px;border-radius:10px;cursor:pointer;align-items:center;justify-content:center;transition:background .18s ease,transform .18s ease;min-width:40px;min-height:40px}
 .hamburger:hover{background:rgba(255,255,255,0.12)}
-.mobile-menu-panel{display:flex;flex-direction:column;gap:14px;padding:18px 20px;background:rgba(3,12,28,0.98);border-top:1px solid rgba(255,255,255,0.08);box-shadow:0 18px 40px rgba(0,0,0,0.25);width:100%;max-height:0;overflow:hidden;visibility:hidden;opacity:0;transform:translateY(-14px);pointer-events:none;transition:opacity .28s ease,transform .28s ease,max-height .28s ease,visibility .28s ease;will-change:opacity,transform,max-height;}
-.mobile-menu-panel.open{display:flex;visibility:visible;opacity:1;transform:translateY(0);pointer-events:auto;max-height:calc(100vh - 90px);overflow-y:auto;-webkit-overflow-scrolling:touch;}
+.mobile-menu-panel{display:none;flex-direction:column;gap:12px;padding:16px 20px;background:rgba(3,12,28,0.98);border-top:1px solid rgba(255,255,255,0.08);box-shadow:0 18px 40px rgba(0,0,0,0.25);width:100%;max-height:0;overflow:hidden;visibility:hidden;opacity:0;transform:translateY(-14px);pointer-events:none;transition:opacity .28s ease,transform .28s ease,max-height .28s ease,visibility .28s ease;will-change:opacity,transform,max-height;}
+.mobile-menu-panel.open{display:flex;visibility:visible;opacity:1;transform:translateY(0);pointer-events:auto;max-height:calc(100vh - 100px);overflow-y:auto;-webkit-overflow-scrolling:touch;}
 .mobile-menu-group{display:flex;flex-direction:column;gap:10px}
-.mobile-menu-group a{display:block;padding:12px 14px;border-radius:12px;color:#fff;text-decoration:none;font-weight:700;background:rgba(255,255,255,0.03);transition:background .18s ease}
+.mobile-menu-group a{display:block;padding:10px 14px;border-radius:10px;color:#fff;text-decoration:none;font-weight:600;background:rgba(255,255,255,0.03);transition:background .18s ease}
 .mobile-menu-group a:hover{background:rgba(255,255,255,0.08)}
 .mobile-join{width:100%;text-align:center}
 
@@ -379,16 +379,17 @@ body{
 .mega-menu .mega-right{border-left:1px solid rgba(255,255,255,0.06);padding-left:28px}
 
 @media (max-width:900px){
-  .nav-inner{gap:10px;align-items:flex-start;flex-wrap:wrap;justify-content:space-between}
-  .nav-left{flex:1 1 100%;justify-content:space-between;min-width:0}
+  .nav-inner{padding:8px 0;gap:12px}
+  .prime-logo img{height:65px;max-width:180px}
+  .nav-left{flex:0 0 auto}
   .main-nav{display:none}
-  .nav-right{width:100%;display:flex;justify-content:flex-end;align-items:center;gap:8px;flex-wrap:nowrap;min-width:0}
+  .nav-right{flex:1 0 auto;justify-content:flex-end;gap:6px}
   .nav-right > .lang,
   .nav-right > .icon-btn,
   .nav-right > .profile-menu,
   .nav-right > .join-btn{display:none}
-  .hamburger{display:inline-flex !important}
-  .mobile-menu-panel{order:1;flex:1 1 100%;width:100%;margin-top:12px;z-index:45}
+  .hamburger{display:inline-flex}
+  .mobile-menu-panel{display:none}
   .mobile-menu-panel.open{display:flex}
   .movie-hero-inner{flex-direction:column;align-items:flex-start}
   .poster{width:100%;height:420px}
@@ -414,15 +415,32 @@ body{
 }
 
 @media (max-width:520px){
+  .nav-inner{padding:8px 0;gap:12px}
   .prime-logo img{height:60px;max-width:160px}
-  .nav-right{justify-content:flex-end;gap:8px}
-  .hamburger{font-size:24px;padding:8px;min-width:48px;min-height:48px}
+  .hamburger{font-size:20px;padding:6px 8px;min-width:38px;min-height:38px}
   .footer-grid{grid-template-columns:1fr;gap:12px}
   #back-to-top{right:12px;bottom:12px}
+  .movie-hero{padding:16px 0 24px}
+  .meta{margin-top:0}
+  .section{padding:40px 0}
 }
 
 @media (max-width:480px){
   .search-wrap{display:none}
   .movie-title{font-size:20px}
+  .nav-inner{padding:6px 0;gap:10px}
+  .prime-logo img{height:55px;max-width:140px}
+  .hamburger{font-size:18px;padding:5px 6px;min-width:34px;min-height:34px}
+  .movie-hero{padding:12px 0 20px}
+  .hero-card-row{margin:16px auto 0}
+  .section{padding:32px 0}
+}
+
+@media (max-width:360px){
+  .nav-inner{padding:6px 0;gap:8px}
+  .prime-logo img{height:50px;max-width:120px}
+  .hamburger{font-size:16px;padding:4px 5px;min-width:30px;min-height:30px}
+  .movie-hero{padding:8px 0 16px}
+  .hero-card-row{margin:12px auto 0}
 }
 
