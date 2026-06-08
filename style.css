@@ -51,7 +51,7 @@ body{
 .hero-content{position:relative;z-index:2;padding:80px 0;color:#fff}
 
 /* movie detail hero */
-.movie-hero{padding:40px 0}
+.movie-hero{padding:40px 0;scroll-margin-top:120px}
 .movie-hero-inner{display:flex;gap:28px;align-items:flex-start}
 .hero-card-row{display:flex;gap:14px;margin:24px auto 0;max-width:1200px;overflow-x:auto;padding:0 20px;scrollbar-width:none;opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.2,.9,.2,1),transform .6s cubic-bezier(.2,.9,.2,1)}
 .hero-card-row::-webkit-scrollbar{display:none}
@@ -81,7 +81,7 @@ body{
 /* Prime-style navbar tweaks */
 .nav-left{display:flex;align-items:center;gap:12px;flex:0 0 auto}
 .prime-logo{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:0}
-.prime-logo img{height:80px;max-width:250px;width:auto;display:block;object-fit:contain}
+.prime-logo img{height:110px;max-width:300px;width:auto;display:block;object-fit:contain}
 .main-nav{display:flex;align-items:center;gap:6px;position:relative;z-index:50}
 .main-nav a{padding:8px 14px;border-radius:999px;background:transparent;color:var(--muted);font-weight:700;position:relative}
 .main-nav a.active{background:rgba(255,255,255,0.08);color:#fff;box-shadow:0 8px 30px rgba(0,0,0,0.5);backdrop-filter:blur(6px)}
