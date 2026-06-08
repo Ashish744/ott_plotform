@@ -295,6 +295,13 @@ body{
 .card-info{opacity:0;transform:translateY(8px);transition:opacity .38s ease,transform .38s ease}
 .card:hover .card-info{opacity:1;transform:none}
 
+/* Hide only titles and descriptions inside cards, keep buttons visible */
+.tv-card .card-details .card-title{display:none !important}
+.tv-card .card-details .card-meta{display:none !important}
+.tv-card .card-details .card-desc{display:none !important}
+.more-item .item-overlay > div:first-child{display:none !important}
+.thumb-overlay > div:first-child{display:none !important}
+
 /* thumbnail hover overlay & shine */
 .thumb{position:relative;overflow:hidden}
 .thumb::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,0.18),transparent);opacity:0;transition:opacity .28s ease}
