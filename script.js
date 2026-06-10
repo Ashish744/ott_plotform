@@ -197,12 +197,14 @@ document.addEventListener('DOMContentLoaded',()=>{
 		mobileMenuBtn.addEventListener('click',(e)=>{
 			e.stopPropagation();
 			const isOpen = mobileMenuPanel.classList.toggle('open');
+			mobileMenuBtn.classList.toggle('active', isOpen);
 			mobileMenuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
 			mobileMenuPanel.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
 		});
 		mobileMenuPanel.querySelectorAll('a').forEach(link=>{
 			link.addEventListener('click',()=>{
 				mobileMenuPanel.classList.remove('open');
+				mobileMenuBtn.classList.remove('active');
 				mobileMenuBtn.setAttribute('aria-expanded','false');
 				mobileMenuPanel.setAttribute('aria-hidden','true');
 			});
@@ -210,6 +212,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 		document.addEventListener('click',(e)=>{
 			if(!mobileMenuPanel.contains(e.target) && !mobileMenuBtn.contains(e.target) && mobileMenuPanel.classList.contains('open')){
 				mobileMenuPanel.classList.remove('open');
+				mobileMenuBtn.classList.remove('active');
 				mobileMenuBtn.setAttribute('aria-expanded','false');
 				mobileMenuPanel.setAttribute('aria-hidden','true');
 			}
